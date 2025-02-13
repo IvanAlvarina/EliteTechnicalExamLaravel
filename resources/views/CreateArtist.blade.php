@@ -21,14 +21,22 @@
                         <div class="mb-4">
                             <label for="code" class="block text-gray-600 font-medium mb-1">Code</label>
                             <input type="text" id="code" name="code" value="{{ old('code', $artist->code ?? '') }}" placeholder="Enter code"
-                                class="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-400">
+                                class="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-400 @error('code') border-red-500 @enderror">
+                        
+                                @error('code')
+                                    <p class="text-red-500 text-sm mt-1">{{ $message }}</p>
+                                @enderror
                         </div>
                     
                         <!-- Name Input -->
                         <div class="mb-4">
                             <label for="name" class="block text-gray-600 font-medium mb-1">Name</label>
                             <input type="text" id="name" name="name" value="{{ old('name', $artist->name ?? '') }}" placeholder="Enter your name"
-                                class="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-400">
+                                class="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-400 @error('name') border-red-500 @enderror">
+                        
+                                @error('name')
+                                    <p class="text-red-500 text-sm mt-1">{{ $message }}</p>
+                                @enderror
                         </div>
                     
                         <!-- Submit Button -->
@@ -42,9 +50,6 @@
                         Go back
                     </a>
                 </div>
-
-                
-
             </div>
         </div>
     </div>

@@ -36,8 +36,8 @@ class ArtistController extends Controller
         ]);
 
         $store = Artist::create([
-            'code' => $request->input('code'),
-            'name' => $request->input('name'),
+            'code' => $request->code,
+            'name' => $request->name,
         ]);
 
         return redirect()->route('Artist')->with('success', 'Artist added successfully!');

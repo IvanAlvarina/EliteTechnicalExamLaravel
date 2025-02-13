@@ -17,10 +17,17 @@
                     </x-nav-link>
                 </div>
 
-                <!-- Navigation Links -->
+                <!-- Artist -->
                 <div class="hidden space-x-8 sm:-my-px sm:ms-10 sm:flex">
                     <x-nav-link :href="route('Artist')" :active="request()->routeIs('Artist')">
                         {{ __('Artist') }}
+                    </x-nav-link>
+                </div>
+
+                <!-- Album -->
+                <div class="hidden space-x-8 sm:-my-px sm:ms-10 sm:flex">
+                    <x-nav-link :href="route('Album')" :active="request()->routeIs('Album')">
+                        {{ __('Album') }}
                     </x-nav-link>
                 </div>
             </div>

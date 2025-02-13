@@ -11,4 +11,9 @@ class artist extends Model
         'code',
         'name'
     ];
+
+    public function albums()
+    {
+        return $this->hasMany(Album::class, 'artist_id', 'id');
+    }
 }
