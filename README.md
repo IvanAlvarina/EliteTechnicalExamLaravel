@@ -1,4 +1,5 @@
 ## How to Test
+- Setup .env file
 - Install dependencies: composer install
 - Install Node packages: npm install
 - Seed the database: php artisan db:seed --class=ArtistAlbumSeeder
